@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1>Add A Flight</h1>
+  <form action="/flights" method="POST">
+    <label>Title:
+      <input type="text" name="departs">
+    </label><br>
+    <label>Release Year:
+      <input type="text" name="flightNo">
+    </label><br>
+    <label>Airlines
+      <select name="airlines">
+        <option value="American">American</option>
+        <option value="Southwest">Southwest</option>
+        <option value="United">United</option>
+      </select>
+    </label><br>
+    <label>Cast (separate actors with commas):
+      <input type="text" name="cast">
+    </label><br>
+    <label>Now Showing:
+      <input type="checkbox" name="nowShowing" checked>
+    </label><br>
+    <button type="submit">Add Movie</button>
+  </form>
+</body>
+</html>
