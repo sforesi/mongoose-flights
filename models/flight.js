@@ -28,5 +28,5 @@ const flightSchema = new Schema({
 const Flight = mongoose.model("Flight", flightSchema)
 
 export {
-  flight
+  Flight,
 }
