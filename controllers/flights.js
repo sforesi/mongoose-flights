@@ -13,6 +13,11 @@ function index(req, res) {
   })
 }
 
+function create(req, res) {
+  
+}
+
+//! Export pls
 export {
   index,
 }
