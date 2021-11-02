@@ -1,0 +1,34 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/flights/show.css" />
+<%- include('../partials/nav') %>
+
+</br>
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Title: </div>
+    <div><%= flight.title %></div>
+    <div>Release Year: </div>
+    <div><%= flight.airport %></div>
+    <div>Rating: </div>
+    <div><%= flight.flightNo %></div>
+    <div>Cast: </div>
+    <div><%= flight.departs %></div>
+    <div>Now Showing: </div>
+    <div><%= flight.nowShowing ? 'Yes' : 'Nope' %></div>
+  </section>
+</main>
+
+<label>Seat
+  <input type="text" name="seat"
+  placeholder="[A-F]+[1-99]" required 
+  pattern="[A-F][1-9]\d?">
+</label></br>
+<label>Price
+  <input type="number" name="price" min="0">
+</label></br>  
+
+<button type="submit">Add Ticket</button>
+
+
+<%- include('../partials/footer') %>

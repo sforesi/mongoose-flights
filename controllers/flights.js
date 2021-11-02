@@ -32,9 +32,19 @@ function create (req, res) {
   res.redirect('/flights')
 }
 
+function show(req, res) {
+  Flight.findById(req.params.id, function (err, flight) {
+    res.render('flights/show', { 
+      title: 'flight Detail', 
+      flight: flight,
+    })
+  })
+}
+
 //! Export pls
 export {
   index,
   newFlight as new,
   create as add, 
+  show,
 }
