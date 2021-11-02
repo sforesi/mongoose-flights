@@ -26,7 +26,8 @@ const flightSchema = new Schema({
       date.setFullYear(addOne)
       return date
     }
-  } 
+  },
+  tickets: [ticketSchema] 
 })
 
 
