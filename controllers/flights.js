@@ -45,6 +45,6 @@ function show(req, res) {
 export {
   index,
   newFlight as new,
-  create as add, 
+  create, 
   show,
 }
