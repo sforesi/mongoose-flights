@@ -1,13 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hello</h1>
-  <a href="/flights/new">Add New Flight</a>
-</body>
-</html>
+<%- include("../partials/html-head") %>
+
+<link rel="stylesheet" href="/stylesheets/flights/index.css">
+  
+<%- include("../partials/nav") %>
+<main>
+  <h1>Flight List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Airport</th>
+        <th>Flight Number</th>
+        <th>Departs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% flights.forEach(m => { %>
+        <tr>
+          <td><%= m.airport %></td>
+          <td><%= m.flightNo %></td>
+          <td><%= m.departs %></td>
+          <td>
+            <a href="/flights/<%= m._id %>">DETAILS</a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+<a href="/flights/new">Add New Flight</a>
+<%- include("../partials/footer") %>

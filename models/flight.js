@@ -2,10 +2,10 @@ import mongoose from "mongoose"
 
 const Schema = mongoose.Schema
 
-// const flightSchema = new Schema({
-//   content: String,
-//   enum: ["AUS", "DFW", "LAX", "SFO", "SEA"]
-// })
+const ticketSchema = new Schema({
+  seat: {type: String, match: /[A-F][1-9]\d?/ },
+  
+})
 
 
 const flightSchema = new Schema({

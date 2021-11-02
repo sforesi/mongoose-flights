@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
+<%- include("../partials/html-head") %>
+
+<link rel="stylesheet" href="/stylesheets/flights/new.css">
+  
+<%- include("../partials/nav") %>
+<main>
   <h1>Add A Flight</h1>
   <form action="/flights" method="POST">
-    <label>Title:
-      <input type="text" name="departs">
-    </label><br>
-    <label>Release Year:
+    <!-- <label>Release Year:
       <input type="text" name="flightNo">
-    </label><br>
+    </label><br> -->
     <label>Airlines
       <select name="airlines">
         <option value="American">American</option>
@@ -23,13 +16,19 @@
         <option value="United">United</option>
       </select>
     </label><br>
-    <label>Cast (separate actors with commas):
-      <input type="text" name="cast">
+    <label>Airport
+      <select name="airport">
+        <option value="DFW">DFW</option>
+        <option value="DEN">DEN</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+      </select>
     </label><br>
-    <label>Now Showing:
-      <input type="checkbox" name="nowShowing" checked>
-    </label><br>
-    <button type="submit">Add Movie</button>
+    <label>Flight Number:
+      <input type="text" name = 'flightNo'>
+    </label>
+    <button type="submit">Add Flight</button>
   </form>
-</body>
-</html>
+</main>
+
+<%- include("../partials/footer") %> 
