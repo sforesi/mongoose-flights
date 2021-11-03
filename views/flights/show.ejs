@@ -28,6 +28,25 @@
   
   <button type="submit">Add Ticket</button>
 </form>
+<h1>Add A Destination</h1>
+<form action="/flights/<%= flight._id  %>/destinations" method="POST">
+  <select name="destinationId">
+    <% destinations.forEach(function (destination){  %> 
+      <option value="<%= destination._id  %>"><%= destination.airport %> </option>
+      
+      <% }) %> 
+  </select>  
+<button type="submit">Submit</button>
+</form>
+
+<h1>Current Destinations</h1>
+<% flight.destinations.forEach (function (destination){ %>
+  <p><%= destination.airport %> </p> 
+  <% }) %> 
+
+
+
+
 <% if (flight.tickets.length) { %>
   <table>
     <thead>

@@ -4,7 +4,14 @@
 
 <main>
   <h1>Add A Destination</h1>
+  <select>
+    <% destinations.forEach(function(destination) { %>
+      <option><%= destination.airport %></option>
+    <% }) %>
+  </select>
   <form action="/destinations" method="POST">
+    <input type="text" name="airport">
+    <button type="submit">Add A Destination</button>
   </form>
 </main>
 
