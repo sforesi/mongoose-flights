@@ -34,12 +34,29 @@ function create (req, res) {
 
 function show(req, res) {
   Flight.findById(req.params.id, function (err, flight) {
+    console.log('flight', flight)
     res.render('flights/show', { 
       title: 'flight Detail', 
       flight: flight,
+      
     })
   })
 }
+
+function createTicket(req, res) {
+  Flight.findById(req.params.id, function(error, flight) {
+    console.log('BODY', req.body)
+    console.log('ERROR', error)
+    flight.tickets.push(req.body)
+    console.log(flight)
+    flight.save(function(err) {
+      console.log('error', err)
+      res.redirect(`/flights/${flight._id}`)
+    })
+  })
+}
+
+
 
 //! Export pls
 export {
@@ -47,4 +64,5 @@ export {
   newFlight as new,
   create, 
   show,
+  createTicket,
 }
