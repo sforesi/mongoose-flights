@@ -1,9 +1,9 @@
 import { Router } from 'express'
-// import * as flightsCtrl from '../controllers/flights.js'
+import * as destinationsCtrl from '../controllers/destinations.js'
 const router = Router()
 
 // GET /flights/new
-// router.get('/new', flightsCtrl.new)
+router.get('/new', destinationsCtrl.new)
 
 
 export {
